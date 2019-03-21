@@ -4,11 +4,14 @@
   float: left;
   width: 19%;
   height: 20%;
+  position: relative;
+  font-family: sans-serif;
+  border-radius: 5px;
 }
 .card h2 {
   width: 100%;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 15%;
   margin-bottom: 0px;
 }
 .card h3 {
@@ -43,3 +46,27 @@
   color: #E65100;
 }
 
+.bottom-left {
+  position: absolute;
+  bottom: 5;
+  width: 100%;
+  left: 1;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 5;
+  width: 99%;
+  text-align: right;
+}
+.top-left {
+  position: absolute;
+  top: 5;
+  width: 99%;
+  left: 1;
+}
+.top-right {
+  position: absolute;
+  top: 5;
+  width: 99%;
+  text-align: right;
+}

@@ -1,0 +1,27 @@
+{
+  "Gandalf": [
+    {
+      "suffix": "the Grey",
+      "subtitle": "The Grey Pilgrim",
+      "bottom-left": "Character",
+      "bottom-right": "FR"
+    },
+    {
+      "suffix": "the White",
+      "subtitle": "The White Rider",
+      "bottom-left": "Character",
+      "bottom-right": "TT"
+    },
+    {
+      "subtitle": "Wandering Wizard",
+      "bottom-left": "Character",
+      "bottom-right": "H"
+    }
+  ],
+  "Saruman": {
+    "suffix": "the White",
+    "subtitle": "Head of the White Council",
+    "bottom-left": "Character",
+    "bottom-right": "FR"
+  }
+}

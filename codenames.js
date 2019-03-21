@@ -8,17 +8,52 @@ function shuffle(a) {
     }
     return a;
 };
+function randomChoice(array) {
+  return array[Math.floor(Math.random() * array.length)];
+};
 var styles = ["blue", "red", "tan", "black", "white"];
+var locations = [ "top-left", "top-right", "bottom-left", "bottom-right" ];
+
+function makeCard(title, data) {
+  if ($.isArray(data)) return makeCard(title, randomChoice(data));
+
+  if (data.override) {
+    title = data.override;
+  }
+  if (data.prefix) {
+    title = data.prefix + " " + title;
+  }
+  if (data.suffix) {
+    title = title + " " + data.suffix;
+  }
+  var base = $("<div>")
+    .addClass("card")
+    .addClass("white");
+  $("<h2>").text(title).appendTo(base);
+  if (data.subtitle) {
+    $("<h3>").text(data.subtitle).appendTo(base);
+  }
+  $.each(locations, function(i, l) {
+    console.log(l);
+    if (data[l]) {
+      $("<div>").text(data[l]).addClass(l).appendTo(base);
+    }
+  });
+
+  return base;
+};
+
 function process(data) {
-  var shuffled = shuffle(data);
+  var keys = Object.keys(data);
+  while (keys.length < 20) {
+    keys.push.apply(keys, keys);
+  }
+  var shuffled = shuffle(keys);
   var firsts = shuffled.slice(0, 20);
-  $.each(firsts, function(d) {
-    var item = data[d];
-    var base = $("<div>")
-      .addClass("card")
-      .addClass("white");
-    $("<h2>").text(item.title).appendTo(base);
-    $("<h3>").text(item.subtitle).appendTo(base);
+
+  $.each(firsts, function(i) {
+    var key = firsts[i];
+    var base = makeCard(key, data[key]);
     base.appendTo("body");
   });
   $(".card").click(function() {
