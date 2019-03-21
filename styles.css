@@ -1,0 +1,45 @@
+.card {
+  margin: 5px;
+  border: 1px black solid;
+  float: left;
+  width: 19%;
+  height: 20%;
+}
+.card h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 0px;
+}
+.card h3 {
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+.card.white {
+  border: 1px black solid;
+  background-color: #FFF;
+  color: #000;
+}
+.card.blue {
+  border: 1px #0D47A1 solid;
+  background-color: #448AFF;
+  color: #0D47A1;
+}
+.card.red {
+  border: 1px #B71C1C solid;
+  background-color: #FF8A80;
+  color: #B71C1C;
+}
+.card.black {
+  border: 1px #FFF solid;
+  background-color: #000;
+  color: #FFF;
+}
+.card.tan {
+  border: 1px #E65100 solid;
+  background-color: #FFD180;
+  color: #E65100;
+}
+
