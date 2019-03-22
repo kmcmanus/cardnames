@@ -34,7 +34,6 @@ function makeCard(title, data) {
     $("<h3>").text(data.subtitle).appendTo(base);
   }
   $.each(locations, function(i, l) {
-    console.log(l);
     if (data[l]) {
       $("<div>").text(data[l]).addClass(l).appendTo(base);
     }
